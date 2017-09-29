@@ -1,0 +1,2 @@
+# jArticulator
+Articulatory speech synthesis
