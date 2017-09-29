@@ -1,0 +1,8 @@
+%Plots the frequency response of simulink tube model
+
+t = 0:5000/11026:5000;
+
+y=
+
+plot(t(2:end),simout.*simout)
+

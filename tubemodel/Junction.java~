@@ -1,0 +1,35 @@
+package tubemodel;
+
+public class Junction
+{
+	public Tube tube1;
+	public Tube tube2;
+	
+	public Junction(Tube t1, Tube t2)
+	{
+		tube1=t1;
+		tube2=t2;
+	}
+		
+	/**
+	* Simulates the junction before each step
+	*/		
+	public void calculate()
+	{
+		double a1=tube1.area;
+		double a2=tube2.area;
+		double ufin=tube1.ufout;
+		double ubin=tube2.ubout;
+		
+		double d=(a1-a2)/(a1+a2);
+		
+		double ubout=(1-d)*ubin - d*ufin;
+		double ufout=d*ubin + (1+d)*ufin;
+		
+		tube2.ufin=ufout;
+		tube1.ubin=ubout;
+		
+	}	
+}
+
+

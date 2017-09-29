@@ -1,0 +1,1 @@
+java -cp jython.jar;jythonconsole.jar;Lib.jar;jArticulator.jar jarticulator.JArticulator
